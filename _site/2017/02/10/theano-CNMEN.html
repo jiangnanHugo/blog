@@ -1,0 +1,29 @@
+<h2 id="problem">Problem</h2>
+<p>Theano: CNMeM is disabled, CuDNN not available</p>
+<h2 id="solution">Solution</h2>
+<p>cnmem package: https://github.com/NVIDIA/cnmem</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>% cd $HOME
+% git clone https://github.com/NVIDIA/cnmem.git cnmem
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>% cd cnmem
+% mkdir build
+% cd build
+% cmake ..
+% make
+</code></pre>
+</div>
+<h3 id="link-with-cnmem">link with cnmem</h3>
+<p>The source folder contains a header file <code class="highlighter-rouge">include/cnmem.h</code> and the build directory contains the library <code class="highlighter-rouge">libcnmem.so</code>, put them into your cuda path:  <code class="highlighter-rouge">/usr/local/cuda/include</code>,<code class="highlighter-rouge">/usr/local/cuda/lib64</code></p>
+
+<h3 id="thenaorc-config">.thenaorc config</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>[lib]
+cnmem=1
+</code></pre>
+</div>
+
+<h3 id="test">Test</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; import theano
+&gt;&gt;&gt; Using gpu device 0: GeForce GTX TITAN X (CNMeM is enabled with initial size: 95.0% of memory, cuDNN 5005)
+</code></pre>
+</div>
