@@ -60,3 +60,4 @@ SHORT_REF_RE = NOIMG + r'\[([^\]]+)\]'
 
 ```
 
+$$f(x)=\sigmoid(Wx+b)$$
