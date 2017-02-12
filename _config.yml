@@ -2,7 +2,7 @@
 # SEO settings
 title: "Nan Jiang's "
 title2: " Blog site" # default: ""
-description: "Just another minimalist Jekyll theme that focuses on technical writing."
+description: "my personal blogger site."
 keywords: "Jekyll, theme, free, download, SEO, blog, web, minimalist, thinkspace"
 url: http://jiangnanhugo.github.io/blog # site url
 baseurl: "/blog" # apply repo name if use it under gh-pages branch
@@ -14,10 +14,13 @@ disqus_shortname: "nanjiang"
 twitter_username: "nanjiang"
 comments: true 
 
+
+
 # Build settings
 permalink   : /:year/:title/
 markdown    : kramdown
 highlighter : rouge
+katex       : true
 
 source: ./
 destination: ./_site
