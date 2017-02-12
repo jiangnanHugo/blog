@@ -8,6 +8,7 @@ keywords: "regrex,python"
 
 # Regular Expression Patterns
 
+
 Following lists the regular expression syntax that is available in Python.
 
 | Pattern | Description                              |
@@ -60,4 +61,4 @@ SHORT_REF_RE = NOIMG + r'\[([^\]]+)\]'
 
 ```
 
-$$f(x)=\sigmoid(Wx+b)$$
+

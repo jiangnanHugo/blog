@@ -20,7 +20,7 @@ comments: true
 permalink   : /:year/:title/
 markdown    : kramdown
 highlighter : rouge
-katex       : true
+mathjax     : true
 
 source: ./
 destination: ./_site
