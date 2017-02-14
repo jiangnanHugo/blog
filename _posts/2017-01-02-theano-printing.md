@@ -1,5 +1,9 @@
 ---
-published: false
+layout: post
+title: "Theano Printing"
+description: "daily post"
+comments: true
+keywords: "theano, python"
 ---
 # Theano printing 
 
