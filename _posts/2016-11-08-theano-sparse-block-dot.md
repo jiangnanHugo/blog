@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "theano sparse_block_dot"
-date: "2017-02-28 21:08"
+date: "2017-11-08"
 comments: true
 ---
 
@@ -28,7 +28,7 @@ for b in range(batch_size):
 ```
 
 ### Return
-```
+```python
 - dot(W[i, j], h[i]) + b[j] #but b[j] is only added once
 
 - shape: (batch, oWin, oSize)
@@ -38,7 +38,7 @@ for b in range(batch_size):
 used form calculating `theano.tensor.nnet.h_softmax`;
 
 ### Codes
-```
+```python
 
 def h_softmax(x, batch_size, n_outputs, n_classes, n_outputs_per_class,
               W1, b1, W2, b2, target=None):
