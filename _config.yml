@@ -12,14 +12,14 @@ google_analytics: UA-91769229-1
 repo: http://github.com/jiangnanhugo/blog
 disqus_shortname: "nanjiang"
 twitter_username: "nanjiang"
-comments: true 
+comments: true
 
 
 
 # Build settings
 permalink   : /:year/:title/
 markdown    : kramdown
-highlighter : rouge
+highlighter : pygments
 mathjax     : true
 
 source: ./
