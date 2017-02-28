@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "theano sparse_block_dot"
-date: "2017-11-08"
+date: "2016-11-08"
 comments: true
 ---
 
