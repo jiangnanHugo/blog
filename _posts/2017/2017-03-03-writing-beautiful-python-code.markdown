@@ -5,8 +5,8 @@ date: "2017-03-03 11:11"
 comments: true
 ---
 
-Notes from Raymond Hettinger's talk at pycon US 2013. [video](http://www.youtube.com/watch?feature=player_embedded&v=OSGv2VnC0go), [slides](https://speakerdeck.com/pyconslides/transforming-code-into-beautiful-idiomatic-python-by-raymond-hettinger-1)
-[Documents](https://gist.github.com/JeffPaine/6213790).
+Notes from Raymond Hettinger's talk at pycon US 2013. [video](http://www.youtube.com/watch?feature=player_embedded&v=OSGv2VnC0go), [slides](https://speakerdeck.com/pyconslides/transforming-code-into-beautiful-idiomatic-python-by-raymond-hettinger-1),
+[Gist Doc](https://gist.github.com/JeffPaine/6213790).
 
 
 ## 1. Looping over a range of numbers
