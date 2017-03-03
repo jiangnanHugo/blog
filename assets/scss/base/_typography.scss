@@ -89,17 +89,17 @@ code {
   background: none;
   border-radius: 0;
   border: none;
-  font-family: $base-font-family;
-  font-size: 0.9em;
+  font-family: $monospace-font-family;
+  font-size: 1em;
   margin: 0;
   padding: 0 5px;
-  background-color: lighten($light-gray-color, 13%);
+  background-color: lighten($light-gray-color, 20%);
 }
 
 pre {
   -webkit-overflow-scrolling: touch;
-  font-family: $base-font-family;
-  font-size: 0.85em;
+  font-family: $monospace-font-family;
+  font-size: 1em;
   margin: 0;
   padding: 5px 10px !important;
   overflow: auto;

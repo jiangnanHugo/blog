@@ -19,7 +19,7 @@ comments: true
 # Build settings
 permalink   : /:year/:title/
 markdown    : kramdown
-highlighter : pygments
+highlighter : rouge
 mathjax     : true
 
 source: ./
