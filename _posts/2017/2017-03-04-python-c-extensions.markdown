@@ -8,7 +8,7 @@ comments: true
 ### Note:
  these content is collect from book [Intermediate Python](http://book.pythontips.com/en/latest/python_c_extension.html) and [Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/scenarios/clibs/).
 
-## 1. C Foreign Function Interface
+## 1. C Foreign Function Interface (CFFI)
 
 `CFFI <https://cffi.readthedocs.io/en/latest/>` provide a simple to use mechanism for interfacing with C from CPython and PyPy. It supports two model:
 
@@ -148,7 +148,88 @@ All python object are represented as `PyObject` struct which is defined in `Pyth
 
 `adder.c`
 ```c
-//
+// Python.h has all the required function definitions to manipulate the Python objects.
+#include<Python.h>
+
+// This is the function that is called from your python code
+static PyObject* addList_add(PyObject* self,PyObject*args){
+  PyObject* ListObj;
+
+  //The input arguments come as a tuple, we parse the args to get the various variables
+  //In this case it's only one list variable, which will now be reference by ListObj
+  if(! PyArg_ParseTuple(atgs,"O",&ListObj)){
+    return NULL;
+  }
+
+  // length of the list
+  long length=PyList_Size(listObj);
+
+  //iterate over all the elements
+  int i,sum=0;
+  for(i=0;i<length;i++){
+    // get an element out of the list - the element is also a python objects
+    PyObject* temp=PyList_GetItem(listObj,i);
+    // we know that object reprsents an integer - so convert it into C long
+    long elem=PyInt_AsLong(temp);
+    sum+=elem;
+  }
+
+  // value returned back to python code - another python object
+  // build value here convers the C long a python integer
+  return Py_BuildValue("i",sum);
+}
+
+/* This table contains the relavent info mapping -
+ <function-name in python module>, <actual - function>,
+ <type-of-args the function expects>, <docstring associcated with the function>
+*/
+static PyMethodDef addList_funcs[]={
+  {"add",(PyCFunction)addList_add,METH_VARAGES,addList_docs},
+  {NULL,NULL,0,NULL}
+};
+
+/*
+addList is the module name, add this is the initialization blockof the module.
+<desired module name>,<the-info-table>,<module's-docstring>
+*/
+PyMODINIT_FUNC initaddList(void){
+  Py_InitModule3("addList", addList_funcs,
+                  "Add all the lists");
+}
 
 ```
-waiting for update.
+
+1. the `<Python.h>` file consists of all the required types (to represent Python Object types) and function definitions (to operate on the python objects).
+2. Next we write the function which we plan to call from python. {module-name}_{function-name}, which in this case is `addList_add`.
+3. Then fill in the information table - contains all the relevant information of the functions.
+4. the module initialization block which is of the signature `PyMODINIT_FUNC init{module-name}`
+
+
+
+Now we build the C module. Save the following code as `setup.py`
+```
+# build the modules
+from distutils.core import setup, Extensions
+
+setup(name="addList",version='1.0', ext_modules=[Extension('addList',['adder.c'])])
+```
+and run
+```
+python setup.py install
+```
+
+This should now build and install the C file into the python module we desire.
+
+After all this hard work, we'll now test if the module works.
+
+```
+# module that talks to the C  code
+import addList
+l=[1,2,3,4,5]
+print "Sum of List - "+str(l)+" = " + str(addList.add(l))
+```
+Add here is the output
+```
+Sum of List - [1, 2, 3, 4, 5] = 15
+```
+So as you can see, we have developed our first successful C Python extension using the Python.h API. 
