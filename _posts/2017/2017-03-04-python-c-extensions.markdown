@@ -207,14 +207,14 @@ PyMODINIT_FUNC initaddList(void){
 
 
 Now we build the C module. Save the following code as `setup.py`
-```
+```python
 # build the modules
 from distutils.core import setup, Extensions
 
 setup(name="addList",version='1.0', ext_modules=[Extension('addList',['adder.c'])])
 ```
 and run
-```
+```python
 python setup.py install
 ```
 
@@ -222,14 +222,14 @@ This should now build and install the C file into the python module we desire.
 
 After all this hard work, we'll now test if the module works.
 
-```
+```python
 # module that talks to the C  code
 import addList
 l=[1,2,3,4,5]
 print "Sum of List - "+str(l)+" = " + str(addList.add(l))
 ```
 Add here is the output
-```
+```python
 Sum of List - [1, 2, 3, 4, 5] = 15
 ```
-So as you can see, we have developed our first successful C Python extension using the Python.h API. 
+So as you can see, we have developed our first successful C Python extension using the Python.h API.
