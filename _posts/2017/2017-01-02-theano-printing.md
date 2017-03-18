@@ -5,7 +5,7 @@ description: "daily post"
 comments: true
 keywords: "theano, python"
 ---
-# Theano printing 
+# Theano printing
 
 To visualize the internal relation graph of theano variables.
 
@@ -14,13 +14,13 @@ To visualize the internal relation graph of theano variables.
 1. `conda install pydot graphviz`
 
 
-2. add graphviz path `D:\Anaconda\Library\bin\graphviz`to system `PATH`[windows version]
+2. add graphviz path `D:\Anaconda\Library\bin\graphviz`to system `PATH` [windows version]
 
-or: 
+or:
 
 1. download installer from `http://www.graphviz.org/Download_windows.php`.
 2. `conda install pydot graphviz`
-3. add graphviz bin path  `C:\Program Files (x86)\Graphviz2.38\bin` to system PATH[windows version]
+3. add graphviz bin path  `C:\Program Files (x86)\Graphviz2.38\bin` to system PATH [windows version]
 
 ## Application
 
@@ -43,4 +43,3 @@ The output file is available at symbolic_graph_opt.png
 
 ```
 ![2]({{site.baseurl}}/_posts/464052-20170102160719566-849318595.png)
-
