@@ -35,8 +35,7 @@ author:
   name     : "Nan Jiang"
   job      : "Undergraduate Student"
   bio      : "Coding Myself."
-  thumb    : /images/author.jpg
-  email    : hnrird@gmail.com
+  email    : jiangnan.hugo@gmail.com
   url      : http://jiangnanhugo.github.io
   github   : http://github.com/jiangnanhugo
   twitter  : https://twitter.com/jiangnan_hugo
@@ -46,7 +45,7 @@ author:
 # social settings
 og_locale: "en_US"
 twitter_card: "summary_large_image"
-twitter_site: "@HeiswayiNrird"
+twitter_site: "@jiangnan_hugo"
 
 gems:
   - bourbon
