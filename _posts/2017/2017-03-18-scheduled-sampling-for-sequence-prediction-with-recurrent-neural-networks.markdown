@@ -1,11 +1,10 @@
 ---
 layout: "post"
-title: "Scheduled sampling for sequence prediction with recurrent neural networks."
-date: "2017-03-18 22:05"
+title: "Scheduled sampling for sequence prediction with recurrent neural networks"
+date: "2017-03-18 22:32"
 category: Paper Notes
 comments: true
 ---
-
 ## Scheduled sampling for sequence prediction with recurrent neural networks.
 
 1. traditional seq2seq model is trained by teacher-forcing, which is totally different during inference.
