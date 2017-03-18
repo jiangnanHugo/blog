@@ -30,15 +30,6 @@ sass:
   sass_dir: assets/scss
   style: compressed # expanded
 
-jekyll-archives:
-  enabled: []
-  layout: 'archive'
-  permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
 
 # Author settings
 author:
@@ -60,7 +51,6 @@ twitter_site: "@jiangnan_hugo"
 gems:
   - bourbon
   - jekyll-paginate
-  - jekyll-archives
 
 # navbar pages
 navbar:
