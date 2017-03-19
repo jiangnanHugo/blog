@@ -11,4 +11,4 @@ comments: true
 3. the sampling function they propose is $\exp$ family that decreased with time, other forms of sampling strategy is not tried. (important!)
 
 
-### category: Paper Notes
+#### Category: Paper Notes
