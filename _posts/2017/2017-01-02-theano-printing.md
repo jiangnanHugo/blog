@@ -5,7 +5,7 @@ description: "daily post"
 comments: true
 keywords: "theano, python"
 ---
-# Theano printing
+
 
 To visualize the internal relation graph of theano variables.
 
