@@ -43,3 +43,5 @@ The output file is available at symbolic_graph_opt.png
 
 ```
 ![2]({{site.baseurl}}/_posts/464052-20170102160719566-849318595.png)
+
+#### Category: Theano
