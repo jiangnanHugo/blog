@@ -37,7 +37,7 @@ Bottom-Up (agglomerative): Starting with each item in its own cluster, find the 
 
 $$d(c_i,c_j)=\min(d(x_{ip},d_{jq}))$$
 
-![min_score]({{ site.url }}/asserts/images/clustering_single.png)
+![min_score]({{ site.url }}/assets/images/clustering_single.png)
 
 
 #### Measures (2): complete link
@@ -46,7 +46,7 @@ $$d(c_i,c_j)=\min(d(x_{ip},d_{jq}))$$
 
 $$d(c_i,c_j)=\max(d(x_{ip},d_{jq}))$$
 
-![max_score]({{ site.url }}/asserts/images/Clustering_complete.png)
+![max_score]({{ site.url }}/assets/images/Clustering_complete.png)
 
 
 
@@ -56,7 +56,7 @@ $$d(c_i,c_j)=\max(d(x_{ip},d_{jq}))$$
 
 $$d(c_i,c_j)=avg\{d(x_{ip},d_{jq})\}$$
 
-![average]({{ site.url }}/asserts/images/Clustering_average.png)
+![average]({{ site.url }}/assets/images/Clustering_average.png)
 
 #### Summary
 
