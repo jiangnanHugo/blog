@@ -5,10 +5,6 @@ date: "2017-04-20 11:38"
 comments: true
 ---
 
-# Hierarchical Clustering
-
-
-
 ### 1. Hierarchical Clustering Approach
 
 - A typical clustering analysis approach via partitioning data set sequentially
@@ -41,7 +37,7 @@ Bottom-Up (agglomerative): Starting with each item in its own cluster, find the 
 
 $$d(c_i,c_j)=\min(d(x_{ip},d_{jq}))$$
 
-![min_score](asserts/clustering_single.png)
+![min_score]({{ site.url }}/asserts/clustering_single.png)
 
 
 #### Measures (2): complete link
@@ -50,7 +46,7 @@ $$d(c_i,c_j)=\min(d(x_{ip},d_{jq}))$$
 
 $$d(c_i,c_j)=\max(d(x_{ip},d_{jq}))$$
 
-![max_score](asserts/Clustering_complete.png)
+![max_score]({{ site.url }}/asserts/Clustering_complete.png)
 
 
 
@@ -60,7 +56,7 @@ $$d(c_i,c_j)=\max(d(x_{ip},d_{jq}))$$
 
 $$d(c_i,c_j)=avg\{d(x_{ip},d_{jq})\}$$
 
-![average](asserts/Clustering_average.png)
+![average]({{ site.url }}/asserts/Clustering_average.png)
 
 #### Summary
 
