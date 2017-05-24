@@ -13,7 +13,7 @@ $$\hat{y}_t=softmax(W h_t),
 
 where $h_t$ is the hidden state output at time step $t$.
 
-$ y \in R^{V}$ is a probability distribution over the vocabulary,
+$ y \in \mathbb{R}^{V}$ is a probability distribution over the vocabulary,
 
 same cross entropy loss function but predicting words instead of classes:
 
