@@ -34,7 +34,7 @@ $$g_t=\phi(W^g x_t+U^g h_{t-1}+b^g)$$
 ### Output Gate:
 Scales the output from the cell.
 
-$$o_t=\sigma(W_o x_t+U^o h^{t-1}+b^o)$$
+$$o_t=\sigma(W^o x_t+U^o h^{t-1}+b^o)$$
 
 ### Internal State update:
 Computes the current timestep's state using the gated previous state and the gated input.
@@ -44,7 +44,7 @@ $$s_t=g_t\cdot i_t+s_{t-1}\cdot f_t$$
 ### Hidden Layer:
 Output of the LSTM scaled by a $\tanh$ (squashed) transformations of the current state.
 
-$$h_t=s_t\cdot \phi(o_t)$$
+$$h_t=\phi(s_t)\cdot o_t$$
 
 其中$\cdot$ 代表"element-wise matrix multiplication"(对应元素相乘)，$\phi(x)=\tanh(x),\sigma(x)=sigmoid(x)$
 
