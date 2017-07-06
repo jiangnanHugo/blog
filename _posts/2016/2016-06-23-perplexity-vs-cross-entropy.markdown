@@ -31,11 +31,11 @@ $$P(x_{t+1}=v_j|x_t\cdots,x_1)=\hat y_j^t$$
 
 where $v_j$ is a word in the vocabulary.
 
-The predicted output vector $\hat y^t\in \mathbb{R}^{|V|}$ is a probability distribution over the vocabulary, and we optimize the cross-entrpy loss:
+The predicted output vector $\hat y^t\in R^{|V|}$ is a probability distribution over the vocabulary, and we optimize the cross-entropy loss:
 
 $$\mathcal{L}^t(\theta)=CE(y^t,\hat y^t)=-\sum_{i=1}^{|V|}{y_i^t\log \hat y_i^t}$$
 
-where $y^t$ is the one-hot vector corresponding to the target word. This is a point-wise loss, and we sum the cross-ntropy loss across all examples in a sequence, across all sequences in the dataset in order to evaluate model performance.
+where $y^t$ is the one-hot vector corresponding to the target word. This is a point-wise loss, and we sum the cross-entropy loss across all examples in a sequence, across all sequences in the dataset in order to evaluate model performance.
 
 ## The relationship between cross-entropy and ppl
 
@@ -53,4 +53,4 @@ Then, it follows that:
 
 $$CE(y^t,\hat y^t)=\log PP(y^t,\hat y^t)$$
 
-In fact, minimzing the arthemtic mean of the cross-entropy is identical to minimizing the geometric mean of the perplexity. If the model predictions are completely random, $E[\hat y_i^t]=\frac{1}{|V|}$, and the expected cross-entropies are $\log |V|$, ($\log 10000\approx 9.21$)
+In fact, minimizing the arthemtic mean of the cross-entropy is identical to minimizing the geometric mean of the perplexity. If the model predictions are completely random, $E[\hat y_i^t]=\frac{1}{V}$, and the expected cross-entropies are $\log V$, ($\log 10000\approx 9.21$)
