@@ -31,7 +31,7 @@ $$P(x_{t+1}=v_j|x_t\cdots,x_1)=\hat y_j^t$$
 
 where $v_j$ is a word in the vocabulary.
 
-The predicted output vector $\hat y^t\in R^{|V|}$ is a probability distribution over the vocabulary, and we optimize the cross-entropy loss:
+The predicted output vector $\hat y^t$ $\in$ $ R^{V}$ is a probability distribution over the vocabulary, and we optimize the cross-entropy loss:
 
 $$\mathcal{L}^t(\theta)=CE(y^t,\hat y^t)=-\sum_{i=1}^{|V|}{y_i^t\log \hat y_i^t}$$
 
